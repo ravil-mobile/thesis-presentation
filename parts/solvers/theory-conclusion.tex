@@ -1,0 +1,41 @@
+\subsection{Conclusion}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{Results and Conclusion}
+    \small
+    \justifying
+    
+    \begin{itemize}
+	    \item As the first step, various preconditioning algorithms were tested
+	    \begin{itemize}
+	    	\setlength\itemsep{1mm}
+	    	
+	    	\item A coarse grid search was used
+	    	
+	    	\item with maximum 3 values for each tuning parameter 
+	    	
+	    	\item starting from the default towards more accurate values 
+	    	
+	    	\item Testing showed there was no preconditioning algorithm 
+	    	
+	    	\item that could result in convergence for the entire set of matrices 
+	    \end{itemize}
+
+	\item Even if we can find an algorithm and suitable parameter settings
+	\begin{itemize}
+		\setlength\itemsep{1mm}
+		
+		\item which will result in convergence of the entire matrix set
+		
+		\item there is no guarantee that it will work in all steps during a simulation
+		
+		\item Iterative methods cannot fulfill \textit{robustness} criterion
+	
+	\end{itemize}
+
+	\item Therefore, direct sparse methods is only one way to go
+	
+	\item In spite of limited tree-task parallelism
+\end{itemize}
+	 
+\end{frame}

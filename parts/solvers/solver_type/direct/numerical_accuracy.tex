@@ -1,0 +1,51 @@
+\subsubsection{Numerical Accuracy}
+
+
+\begin{frame}[t]{Numerical Accuracy: I}
+	\small
+	\begin{itemize}
+		\item Pivoting is a big issue in direct sparse methods
+		\begin{itemize}
+			\item analysis: absence of numerical information
+			
+			\item numerical factorization: it may distort all prediction made during the analysis phases i.e.
+			\begin{itemize}
+				\item fill-in prediction
+				\item load balancing
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+
+	\begin{center}
+		Therefore, threshold pivoting is commonly used for direct sparse methods
+	\end{center}
+
+	Threshold pivoting means that a pivot $|a_{i,i}|$ is accepted if it satisfies:\\
+	
+	\begin{equation}\label{eq:lc-1}
+		|a_{i,i}| \geq \alpha \times max_{k=i \dots n} |a_{k,i}|
+	\end{equation}
+	
+	where $\alpha \in [0,1]$ and $k=i \dots n$ represents row indices of column $i$ within the fully summed block of a frontal matrix.\\
+	
+\end{frame}
+
+
+
+\begin{frame}[t]{Numerical Accuracy: II}
+	\small
+	\begin{itemize}
+		\item In case of small values of $\alpha$
+		
+		\item solutions can be numerically inaccurate
+		\item may demand to perform solution refinements 
+	\end{itemize}
+
+	\vspace{5mm}
+	As an example, solution accuracy can be improved using:
+	\begin{itemize}
+		\item  iterative refinement method based a on solution residual
+		
+		\item  resulting $LU$ decomposition can be used as a preconditioner for a Krylov-based method e.g. GMRES
+	\end{itemize}
+\end{frame}

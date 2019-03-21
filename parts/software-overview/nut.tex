@@ -1,0 +1,82 @@
+\subsection{NuT}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifSpeech
+\begin{frame}[t]{8-1: NuT Purpose and Architecture}
+    \spc
+    \justifying
+    
+    \begin{itemize}
+        \setlength\itemsep{0.25cm}
+        \item Numerical Toolkit is a \textbf{container} of various \textbf{dense and sparse} linear algebra \textbf{subroutines}
+        
+        \item the main focus is \textbf{parallel execution} on distributed-memory machine
+        
+        \item based on Portable, Extensible Toolkit for Scientific Computation \textbf{PETSc}
+        
+        \item NuT design follows the paradigm of \textbf{Adapter/Wrapper} pattern which provides \textbf{uniform common interface} for its services 
+        
+        \item to achieve \textbf{re-usability}, flexibility and extensibility properties of the code
+    \end{itemize}
+
+\end{frame}
+\fi
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifSpeech
+\begin{frame}[t]{8-2: NuT Purpose and Architecture}
+    \justifying
+    
+        Example ATHLET-NuT:
+         \begin{itemize}
+            \setlength\itemsep{0.25cm}
+         
+            \item ATHLET is responsible for \textbf{marching} of the numerical \textbf{integration solver}
+            
+            \item ATHLET computes a \textbf{Jacobian} matrix approximation and the \textbf{right-hand sides}
+            
+            \item NuT  \textbf{solves systems} of linear equation
+        \end{itemize}
+
+        
+        \vspace{0.75cm}
+        Communication or Software Coupling:
+        \begin{itemize}
+            \setlength\itemsep{0.25cm}
+            \item Implemented by means of \textbf{MPI}
+            
+            \item Communication is \textbf{synchronous} 
+        \end{itemize}
+
+        
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{9: NuT Multi-client mode}
+    \justifying
+    
+    \begin{itemize}
+    
+        \setlength\itemsep{0.5cm}
+        \item \textbf{Client-server} architecture is used 
+        
+        \item to \textbf{provide software coupling} between NuT and other GRS tools
+
+        \item  The design allows \textbf{sharing} of some NuT-MPI processes \textbf{among} different \textbf{process groups}
+        
+        \item usually happens due to the finite number of processors on hardware e.g. laptops, PC, etc.
+        
+        \item it is better to avoid sharing 
+    \end{itemize}
+    
+    
+\end{frame}
+\fi
+
+
+

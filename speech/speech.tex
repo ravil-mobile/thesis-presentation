@@ -1,0 +1,143 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{helvet}
+\usepackage[english]{babel}
+%\usepackage{mathptmx}
+\usepackage{ragged2e}
+
+\usecolortheme{tum}
+\useoutertheme{tum}
+
+\setbeamerfont{author}{size=\footnotesize}
+\setbeamerfont{date}{size=\scriptsize}
+\setbeamerfont{date}{size=\scriptsize}
+\setbeamertemplate{caption}[numbered]
+
+\newcommand{\spc}{\vspace{0.25cm}}
+\usepackage{biblatex}
+\addbibresource{bibliography.bib}
+\usepackage{graphicx}
+\usepackage{subfig}
+
+
+% style settings
+\usecolortheme{rose}
+%\useinnertheme[shadow]{rounded}
+\useinnertheme[]{rectangles}
+\usecolortheme{dolphin}
+\useoutertheme{infolines}
+
+\makeatother
+\setbeamertemplate{footline}{}
+
+
+
+
+\useinnertheme{rectangles}
+
+\usepackage{pgf}  
+\usepackage{tikz}
+\logo{
+\makebox[0.95\paperwidth]{
+    \includegraphics[width=0.29\textwidth]{figures/logos/logo-grs-dummy.png}%
+    \hfill%
+    \includegraphics[width=0.1\textwidth]{figures/logos/logo-tum.png}%
+}
+}
+
+\setbeamertemplate{title page}
+{
+	\vbox{}
+	\vfill
+	\begin{flushleft}
+		\begin{beamercolorbox}[sep=8pt,center]{title}
+			\usebeamerfont{title}\inserttitle\par%
+			\ifx\insertsubtitle\@empty%
+			\else%
+				\vskip0.25em%
+				{\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
+			\fi%
+    	\end{beamercolorbox}%
+    	\vskip1em\par
+		\begin{beamercolorbox}[sep=8pt,center]{author}
+		\usebeamerfont{author}\insertauthor
+		\end{beamercolorbox}
+		\begin{beamercolorbox}[sep=8pt,center]{institute}
+		\usebeamerfont{institute}\insertinstitute
+		\end{beamercolorbox}
+		\begin{beamercolorbox}[sep=8pt,center]{date}
+		\usebeamerfont{date}\insertdate
+		\end{beamercolorbox}\vskip0.5em
+		{\usebeamercolor[fg]{titlegraphic}\inserttitlegraphic\par}
+	\end{flushleft}
+	\vfill
+}
+    
+\mode<presentation>
+
+\title{Speech}
+
+\author{Ravil Dorozhinskii}
+\institute[]{Computational Science and Engineering}
+
+
+% conditionals
+\newif\ifSpeech
+\newif\ifPresentation
+\newif\ifCommentInclude
+\newif\ifWithResults
+
+\Speechtrue
+\Presentationfalse
+\CommentIncludefalse
+\WithResultstrue
+
+\input{header-style.tex}
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%% INTRO %%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+    \titlepage
+\end{frame}
+
+
+\input{parts/grs-overview.tex}
+
+
+%%%%%%%%%%%%%%%%%%%% SOFTWARE %%%%%%%%%%%%%%%%%%%%
+\input{parts/software-overview/athlet.tex}
+\input{parts/software-overview/nut.tex}
+\input{parts/problem-statement.tex}
+\input{parts/experimental-setup.tex}
+
+%%%%%%%%%%%%%%%%%%%% TASK 2 %%%%%%%%%%%%%%%%%%%%
+\input{parts/accumulator/accumulator-main.tex}
+
+
+%%%%%%%%%%%%%%%%%%%% TASK 1 %%%%%%%%%%%%%%%%%%%%
+\input{parts/solvers/solvers-main.tex}
+
+
+%%%%%%%%%%%%%%%%%%%% THANKY %%%%%%%%%%%%%%%%%%%%
+\begin{frame}{}
+    \centering
+    \Large
+  \emph{Thanks for your attention!}
+  
+\end{frame}
+
+\begin{frame}{}
+    \centering
+    \Large
+  \emph{Questions?}
+\end{frame}
+
+
+\begin{frame}[allowframebreaks]
+        \printbibliography{}
+\end{frame}
+
+
+\end{document}

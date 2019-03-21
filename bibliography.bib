@@ -1,0 +1,534 @@
+@report{articles:blas-performance,
+author = {Kazushige Goto and Robert van de Geijn},
+title = {High-Performance Implementation of the Level-3 BLAS},
+type = {FLAME Working Note 20},
+institution = {The University of Texas at Austin},
+year = {2006},
+}
+
+
+@misc{wiki:runge-kutta,
+author = "{Wikipedia contributors}",
+title = "Runge–Kutta methods --- {Wikipedia}{,} The Free Encyclopedia",
+year = "2018",
+url = "https://en.wikipedia.org/w/index.php?title=Runge%E2%80%93Kutta_methods&oldid=866837125",
+note = "[Online; accessed 10-November-2018]"
+}
+  
+  
+@article{netlib:lapack-1,
+author = {E. Anderson and J. J. Dongarra},
+title = {Evaluating Block Algorithm Variants in LAPACK},
+journaltitle = {UT, CS-90-103},
+year = {1990}
+}
+  
+  
+@online{netlib:lapack-scalapack-general-view,
+title = {Intel Math Kernel Library Documentation, Overview of ScaLAPACK Routines},
+year = {2017},
+url = {https://software.intel.com/en-us/mkl-developer-reference-c-overview-of-scalapack-routines}
+}
+
+
+@article{sparse-la:gmrese-origin,
+author = {Youcef Saad and Martin H. Schultz},
+title = {GMRES: A Generalized Minimal Residual Algorithm For Solving Nonsymmetric Linear Systems},
+journaltitle = {SIAM Journal on Scientific and Statistical Computing},
+year = {1986}
+}
+ 
+ 
+@article{sparse-la:triangular-solve,
+author = {Mahesh V. Joshi and Anshul Guptam and George Karypis and Vipin Kumar},
+title = {A High Performance Two Dimensional Scalable Parallel Algorithm for Solving Sparse Triangular Systems},
+journaltitle = {IEEE Xplore},
+year = {1998}
+}
+
+
+@article{sparse-la:cg,
+author = {Jeffrey Cornelis and Siegfried Cools and Wim Vanroose},
+title = {The Communication-hiding Conjugate Gradient Method with Deep Pipelines},
+journaltitle = {arXiv:1801.04728 [cs.DC]},
+year = {2018}
+}
+ 
+
+@article{wsmp,
+author = {Anshul Gupta and Seid Koric and Thomas George},
+title = {Sparse matrix factorization on massively parallel computers},
+journaltitle = {IEEE Xplore},
+year = {2009},
+}
+
+
+@PhdThesis{complexity-of-spdm,
+author = {Cinna Julie Wu},
+title = {Partial Left-Looking Structured Multifrontal Factorization and Algorithms for Compressed Sensing},
+school = {University of California},
+year = {2012},
+}
+
+
+@online{netlib-overview,
+title = {Netlib Frequently Asked Questions},
+year = {2006},
+url = {http://www.netlib.org/misc/faq.html#2.1},
+}
+
+
+@article{mult-frontal-original:1,
+author = {I. S. Duff and J. K. Reid},
+title = {The Multifrontal Solution of Indefinite Sparse Symmetric Linear},
+journaltitle = {ACM Transactions on Mathematical Software, (TOMS)},
+year = {1983},
+OPTmonth = {September},
+OPTpages = {302-325},
+}
+
+
+@article{frontal-original,
+author = {Irons and Bruce},
+title = {A frontal solution program for finite element analysis},
+journaltitle = {International Journal for Numerical Methods in Engineering},
+year = {1970},
+}
+
+
+@article{elimination-tree,
+author = {A. Pothen and S. Toledo},
+title = {Elimination Structures in Scientific Computing},
+journaltitle = {CRC Press, LLC},
+year = {2001},
+}
+
+
+@article{mult-frontal-original:2,
+author = {Joseph W. H. Liu},
+title = {The Multifrontal Method for Sparse Matrix Solution: Theory and Practice},
+journaltitle = {SIAM},
+year = {1992},
+}
+
+
+@inbook{recursion-tree,
+author = {Thomas H. Cormen and Charles E. Leiserson and Ronald L. Rivest and Clifford Stein},
+title = {The recursion-tree method for solving recurrences},
+booktitle = {Introduction to Algorithms},
+year = {2009},
+}
+
+
+@article{mumps:task-data-parallelism,
+author = {Beaumont Olivier and Guermouche Abdou},
+title = {Task Scheduling for Parallel Multifrontal Methods},
+journaltitle = {Proceedings of the 13th International Euro-Par Conference on Parallel Processing},
+year = {2007},
+}
+
+
+@misc{wiki:amdahls-low,
+    author = "{Wikipedia contributors}",
+    title = "Amdahl's law --- {Wikipedia}{,} The Free Encyclopedia",
+    year = "2018",
+    url = "https://en.wikipedia.org/w/index.php?title=Amdahl%27s_law&oldid=862766351",
+    note = "[Online; accessed 27-November-2018]"
+}
+
+
+@manual{mumps-manual,
+title = {MUltifrontal Massively Parallel Solver, Users’ guide},
+year = {2017},
+}
+
+
+@manual{superlu-manual,
+title = {SuperLU Users’ Guide},
+year = {2011},
+}
+
+@article{mm:elimination-tree-rotations,
+author = {Joseph W. H. Liu},
+title = {Equivalent Sparse Matrix Reordering by Elimination Tree Rotations},
+journaltitle = {SIAM J. Sci. Statist. Comput.},
+year = {1988},
+}
+
+
+@article{mm:optimal-tree-postordering,
+author = {Joseph W. H. Liu},
+title = {On the storage requirement in the out-of-core multifrontal method for sparse factorization},
+journaltitle = {ACM Trans. Math. Software},
+year = {1986},
+}
+
+
+@report{wsmp:direct-solution-of-general-system,
+author = {Anshul Gupta},
+title = {WSMP: Watson Sparse Matrix Package,
+Part II - direct solution of general systems},
+type = {Research Report},
+institution = {IBM T. J. Watson Research Center},
+year = {2000},
+}
+
+
+@article{sparse-matrix-collection:1,
+ author = {Davis, Timothy A. and Hu, Yifan},
+ title = {The University of Florida Sparse Matrix Collection},
+ journal = {ACM Trans. Math. Softw.},
+ issue_date = {November 2011},
+ volume = {38},
+ number = {1},
+ month = dec,
+ year = {2011},
+ issn = {0098-3500},
+ pages = {1:1--1:25},
+ articleno = {1},
+ numpages = {25},
+ url = {http://doi.acm.org/10.1145/2049662.2049663},
+ doi = {10.1145/2049662.2049663},
+ acmid = {2049663},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {Graph drawing, multilevel algorithms, performance evaluation, sparse matrices},
+}
+
+
+@article{sparse-matrix-collection:2,
+ author = {Duff, I. S. and Grimes, Roger G. and Lewis, John G.},
+ title = {Sparse Matrix Test Problems},
+ journal = {ACM Trans. Math. Softw.},
+ issue_date = {March 1989},
+ volume = {15},
+ number = {1},
+ month = mar,
+ year = {1989},
+ issn = {0098-3500},
+ pages = {1--14},
+ numpages = {14},
+ url = {http://doi.acm.org/10.1145/62038.62043},
+ doi = {10.1145/62038.62043},
+ acmid = {62043},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+}
+
+
+@Misc{petsc-web-page,
+author = {Satish Balay and Shrirang Abhyankar and Mark~F. Adams and Jed Brown and Peter Brune and Kris Buschelman and Lisandro Dalcin and Alp Dener and Victor Eijkhout and William~D. Gropp and Dinesh Kaushik and Matthew~G. Knepley and Dave~A. May and Lois Curfman McInnes and Richard Tran Mills and Todd Munson and Karl Rupp and Patrick Sanan and Barry~F. Smith and Stefano Zampini and Hong Zhang and Hong Zhang},
+title = {{PETS}c {W}eb page},
+url = {http://www.mcs.anl.gov/petsc},
+howpublished = {\url{http://www.mcs.anl.gov/petsc}},
+year = {2018}
+}
+
+
+@article{shylu-hybrid-solver,
+author = {Sivasankaran Rajamanickam and Erik G. Boman and Michael A. Heroux},
+title = {ShyLU: A Hybrid-Hybrid Solver for Multicore Platforms},
+journaltitle = {2012 IEEE 26th International Parallel and Distributed Processing Symposium},
+year = {2012},
+}
+
+
+@online{list-of-sparse-direct-solvers,
+author = {X. Li},
+title = {Direct Solvers for Sparse Matrices},
+year = {2018},
+url = {http://crd-legacy.lbl.gov/~xiaoye/SuperLU/SparseDirectSurvey.pdf},
+}
+
+
+
+@inproceedings{mm-comparison-of-packages,
+author = {Kwack, Jae Hyuk and Bauer, Gregory and Koric, Seid},
+year = {2016},
+month = {05},
+pages = {},
+title = {Performance Test of Parallel Linear Equation Solvers on Blue Waters – Cray XE6/XK7 system}
+}
+
+
+@article{mm-backward-error,
+author = {M. Arioli and J. Demmel and I. S. Duff},
+title = {Solving sparse linear systems with sparse backward error},
+journaltitle = {SIAM Journal on Matrix Analysis and Applications},
+year = {1989},
+}
+
+
+
+@inproceedings{PARASOL,
+  title = {{PARASOL: An Integrated Programming environment for Parallel Sparse Matrix Solvers}},
+  author = {Amestoy, Patrick R. and Duff, Iain S. and L'Excellent, Jean-Yves and Plech{\'a}{\v c}, Peter},
+  url = {https://hal.inria.fr/hal-00856861},
+  booktitle = {{PINEAPL Workshop, A Workshop on the Use of Parallel Numerical Libraries in Industrial End-user Applications}},
+  address = {CERFACS, Toulouse, France},
+  year = {1998},
+  HAL_ID = {hal-00856861},
+  HAL_VERSION = {v1},
+}
+
+
+@online{MUMPS:description,
+author = {Amestoy, Patrick R. and Duff, Iain S. and  Koster, Jacko and L'Excellent, Jean-Yves},
+title = {MUMPS: A Multifrontal Massively Parallel Solver},
+year = {2002},
+url = {https://www.ercim.eu/publication/Ercim_News/enw50/amestoy.html},
+}
+
+@article{reordering:AMD,
+author = {Amestoy, Patrick R. and Davis, Timothy A. and Duff, Iain S.},
+title = {An Approximate Minimum Degree Ordering Algorithm},
+journaltitle = {SIAM Journal on Matrix Analysis and Applications},
+year = {1996},
+}
+
+
+@MISC{reordering:METIS,
+author = {George Karypis and Vipin Kumar},
+title = {{MeTis: Unstructured Graph Partitioning and Sparse Matrix Ordering System, Version 4.0}},
+howpublished = {\url{http://www.cs.umn.edu/~metis}},
+year = {2009},
+organization = {University of Minnesota, Minneapolis, MN},
+}
+
+
+@article{reordering:SCOTCH,
+  title={Scotch and libScotch 5.1 user's guide},
+  author={Pellegrini, Fran{\c{c}}ois},
+  year={2008}
+}
+
+
+@article{reordering:PORD,
+  title={Towards a tighter coupling of bottom-up and top-down sparse matrix ordering methods},
+  author={Schulze, J{\"u}rgen},
+  journal={BIT Numerical Mathematics},
+  volume={41},
+  number={4},
+  pages={800--841},
+  year={2001},
+  publisher={Springer}
+}
+
+@inproceedings{reordering:QAMD,
+  title={Recent progress in parallel multifrontal solvers for unsymmetric sparse matrices},
+  author={Amestoy, PR},
+  booktitle={Proceedings of the 15th World Congress on Scientific Computation, Modelling and Applied Mathematics, IMACS},
+  volume={97},
+  year={1997}
+}
+
+
+
+@article{mm:scaling:duff1999design,
+  title={The design and use of algorithms for permuting large entries to the diagonal of sparse matrices},
+  author={Duff, Iain S and Koster, Jacko},
+  journal={SIAM Journal on Matrix Analysis and Applications},
+  volume={20},
+  number={4},
+  pages={889--901},
+  year={1999},
+  publisher={SIAM}
+}
+
+
+@article{mm:scaling:duff2001algorithms,
+  title={On algorithms for permuting large entries to the diagonal of a sparse matrix},
+  author={Duff, Iain S and Koster, Jacko},
+  journal={SIAM Journal on Matrix Analysis and Applications},
+  volume={22},
+  number={4},
+  pages={973--996},
+  year={2001},
+  publisher={SIAM}
+}
+
+
+@article{mm:scaling:duff2005strategies,
+  title={Strategies for scaling and pivoting for sparse symmetric indefinite problems},
+  author={Duff, Iain S and Pralet, St{\'e}phane},
+  journal={SIAM Journal on Matrix Analysis and Applications},
+  volume={27},
+  number={2},
+  pages={313--340},
+  year={2005},
+  publisher={SIAM}
+}
+
+
+@phdthesis{l2012multifrontal,
+  title={Multifrontal methods: parallelism, memory usage and numerical aspects},
+  author={L'Excellent, Jean-Yves},
+  year={2012},
+  school={Ecole normale sup{\'e}rieure de lyon-ENS LYON}
+}
+
+
+@misc{wiki:blas-implementations,
+    author = "{Wikipedia contributors}",
+    title = "Basic Linear Algebra Subprograms --- {Wikipedia}{,} The Free Encyclopedia",
+    year = "2018",
+    url = "https://en.wikipedia.org/w/index.php?title=Basic_Linear_Algebra_Subprograms&oldid=869520300",
+    note = "[Online; accessed 14-December-2018]"
+}
+
+
+@article{geist1989task,
+  title={Task scheduling for parallel sparse Cholesky factorization},
+  author={Geist, GA and Ng, Esmond},
+  journal={International Journal of Parallel Programming},
+  volume={18},
+  number={4},
+  pages={291--314},
+  year={1989},
+  publisher={Springer}
+}
+
+
+
+@inproceedings{guermouche2003memory,
+  title={On the memory usage of a parallel multifrontal solver},
+  author={Guermouche, Abdou and L'Excellent, J-Y and Utard, Gil},
+  booktitle={Parallel and Distributed Processing Symposium, 2003. Proceedings. International},
+  pages={8--pp},
+  year={2003},
+  organization={IEEE}
+}
+
+
+@phdthesis{l2013introduction,
+  title={Introduction of shared-memory parallelism in a distributed-memory multifrontal solver},
+  author={L'Excellent, Jean-Yves and Sid-Lakhdar, Mohamed W},
+  year={2013},
+  school={INRIA}
+}
+
+
+@phdthesis{chowdhury2010some,
+  title={Some experiments and issues to exploit multicore parallelism in a distributed-memory parallel sparse direct solver},
+  author={Chowdhury, Indranil and L'Excellent, Jean-Yves},
+  year={2010},
+  school={INRIA}
+}
+
+
+@article{blom2013rosenbrock,
+  title={Rosenbrock time integration for unsteady flow simulations},
+  author={Blom, DS and Bijl, H and Birken, P and Meister, A and Van Zuijlen, AH},
+  journal={Coupled Problems},
+  year={2013}
+}
+
+
+
+@misc{wiki:petsc-general-info,
+    author = "{Wikipedia contributors}",
+    title = "Portable, Extensible Toolkit for Scientific Computation --- {Wikipedia}{,} The Free Encyclopedia",
+    year = "2018",
+    url = "https://en.wikipedia.org/w/index.php?title=Portable,_Extensible_Toolkit_for_Scientific_Computation&oldid=874478804",
+    note = "[Online; accessed 14-January-2019]"
+  }
+
+
+@online{grs:grs-general-info,
+author = "{Gesellschaft für Anlagenund Reaktorsicherheit (GRS) gGmbH}",
+title = {GRS official website},
+url = "https://www.grs.de"
+}
+
+
+@online{grs:athlet-info,
+author = "{Gesellschaft für Anlagenund Reaktorsicherheit (GRS) gGmbH}",
+title = {ATHLET 3.1A: Program Overview},
+year = {2016},
+url = "https://software.intel.com/en-us/mkl-developer-reference-c-overview-of-scalapack-routines"
+}
+
+
+@online{intro:eu-nuclear-industry-general,
+author = "{European Commission}",
+title = {Nuclear Energy: Safe nuclear power},
+year = {2018},
+url = "https://ec.europa.eu/energy/en/topics/nuclear-energy"
+}
+
+ 
+
+@online{intro:pros-and-cons-of-nuclear-power,
+author = "{Time for change}",
+title = {Pros and cons of nuclear power},
+year = {2007},
+url = "% https://timeforchange.org/pros-and-cons-of-nuclear-power-and-sustainability"
+}
+
+
+@online{intro:efficiency-of-nuclear-power-plants,
+author = "{Jordan Hanania and Braden Heffernan and Jenden, James and Lefsrud, Nathan and Lloyd, Ellen and Stenhouse, Kailyn and Toor, Jasdeep and Donev, Jason}",
+title = {Nuclear power plant - Energy Education},
+journal={Physics 371 course of University of Calgary},
+year = {2019},
+url = "% https://energyeducation.ca/encyclopedia/Nuclear_power_plant"
+}
+
+
+
+@article{gebremedhin2005color,
+  title={What color is your Jacobian? Graph coloring for computing derivatives},
+  author={Gebremedhin, Assefaw Hadish and Manne, Fredrik and Pothen, Alex},
+  journal={SIAM review},
+  volume={47},
+  number={4},
+  pages={629--705},
+  year={2005},
+  publisher={SIAM}
+}
+
+
+@online{mpi:protocols-explanation,
+author = {Lawrence Livermore National Laboratory},
+title = {MPI Performance Topics: MPI Message Passing Protocols},
+year = {2014},
+url = {https://computing.llnl.gov/tutorials/mpi_performance/},
+}
+
+
+@online{rayleigh-ritz-procedure,
+title = {Krylov subspace projection methods: Rayleigh-Ritz procedure},
+year = {2009},
+url = {http://web.cs.ucdavis.edu/~bai/Winter09/krylov.pdf},
+}
+
+
+@online{athlet-compute-grid-moduling,
+title = {Turkey Technical Support and Safety Organization: ATHLET overview},
+year = {2018},
+url = {http://tsoturkey.com/page_Research_software_ATHLET.html},
+}
+
+@Unpublished{perfomance-analysis-framework,
+author = {Gerndt, Michael},
+title = {Performance Analysis},
+note = {Performance Monitoring},
+OPTyear = {2018}
+}
+
+
+@misc{lt:ATHLMaM,
+  title={{ATHLET Mod 3.1A -- Models and Methods}},
+  author={Austregesilo, H. and Bals, C. and Hora, A. and Lerchl, G. and Romstedt, P. and Sch{\"{o}}ffel, P. and Von der Cron, D. and Weyermann, F.},
+  year={2016},
+  month={3},
+  howpublished={distributed with ATHLET}
+} 
+
+@Unpublished{tims-presentation,
+author = {Tim Steinhoff},
+title = {Singly implicit FiterRK methods for thermal-hydraulic simulations
+},
+year = {2018},
+url = {http://somewhere.in.grs.com},
+}

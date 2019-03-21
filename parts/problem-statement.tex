@@ -1,0 +1,80 @@
+\section{Problem Statement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifPresentation
+\begin{frame}[t]{Solving Sparse Linear Systems}
+    \small
+    \justifying
+    Numerical \textbf{integration} of a system of ODEs by means of \textbf{W-methods}:
+    
+    \begin{equation}
+	(I - h_{i}J)\delta y_{ij} = h_{i} f(t_{0} + j \cdot h_{i}, y_{0} + \sum^{j-1}_{l = 0} \delta y_{il}) + h^{2} \frac{\partial f_{0}}{\partial t}
+    \end{equation}
+    
+    can be considered as a solution of a \textbf{sequence of linear systems} from another point of view:
+    
+    \begin{equation}
+	A_{i} \delta y_{ij} =  b_{ij} 
+    \end{equation}
+
+    where $A = (I - h_{i}J)$ is a $\mathbb{R}^{N} \times \mathbb{R}^{N}$ non-singular \textbf{sparse matrix}; $\delta y_{ij}$  and $b_{ij}$ are $\mathbb{R}^{N}$ vectors; $i = 1, 2, 3$; $j=0, \dots, i - 1$\\
+    
+    \begin{block}{NOTE}
+        Computational \textbf{burden} of the W-method mainly lies in \textbf{solving of sparse linear systems} beside evaluation of non-linear function $f$ of \eq{eq:athlet-8}
+    \end{block}
+
+\end{frame}
+\fi
+
+\ifSpeech
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{11: Solving Sparse Linear Systems}
+
+    \justifying
+
+    \textbf{Efficient} numerical integration governed by W-methods \textbf{demenads} the following \textbf{properties} of a linear sparse solver:
+    
+    \begin{itemize}
+	    \item robustness (or numerical stability) with respect to ill-conditioner problems
+    	\item parallel efficiency, with emphasis on strong scaling 
+    \end{itemize}
+    \spc
+    
+    
+    \textbf{Extra constrains} imposed by the project:
+    
+    \begin{itemize}
+    	\item open-source license
+    	\item direct interface to PETSc
+    \end{itemize}
+    
+    \begin{block} {MENTION}
+        \textbf{These Can be considered as Non-Functional requirements}    
+    \end{block}
+    
+    
+\end{frame}
+\fi
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifSpeech
+\begin{frame}{Problem Statement}
+    \spc
+    \justifying
+    
+    \begin{block}{Goals of the study}
+        \begin{enumerate}
+            \setlength\itemsep{0.5cm}
+            \item Find and configure a parallel sparse linear solver
+            
+            \item Improve ATHLET-NuT communication during Jacobian matrix transfers
+        \end{enumerate}
+    \end{block}
+
+\end{frame}
+\fi

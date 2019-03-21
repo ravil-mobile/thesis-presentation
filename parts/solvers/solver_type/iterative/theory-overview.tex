@@ -1,0 +1,60 @@
+\subsection{Iterative Methods}
+\subsubsection{Theory overview}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{Iterative methods}
+    \small
+    
+    \begin{itemize}
+    	\item Given an initial guess
+    	
+    	\item An iterative method generates a sequence of approximate solutions by means of a specific rule
+    	
+    	\item Depending on a method and the given problem,
+    	
+    	\item there may exist certain conditions such that the sequence eventually converges to the exact solution
+    	
+    \end{itemize}
+
+    \begin{itemize}
+    	\item There exist two families of iterative methods: \textit{stationary} and \textit{Krylov-based} methods
+    	
+    	\item Nowadays, Krylov methods dominate in the field of scientific computing
+    	
+    	\begin{itemize}
+    		\item because of their rather fast convergence
+    		
+    		\item in case of solving well conditioned systems
+    		
+    		\item or/and a "\textit{good}" initial guess
+    	\end{itemize}
+    \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}[t]{Krylov-based methods}
+    \small
+    \begin{itemize}
+    	\item \textit{The key idea} is to construct an approximate solution 
+    	\item as a linear combination of vectors $b$, $Ab, \:\: A^2b, \:\: A^3b, \dots A^{n-1}b$
+    	\item known as Krylov subspace $\mathcal{K}_{n}$
+    	
+    	\item where, without of lost of generality, the initial guess $x_0$ is equal to zero
+    	
+    	\item At each iteration, the subspace is expanded by adding and evaluating the next vector in the sequence
+    \end{itemize}
+
+	\begin{itemize}
+		\item the methods define and expand another subspace $\mathcal{L}_{n}$ 
+		
+		\item such that $r_{n} = b - Ax_{n} \perp \mathcal{L}_{n}$ 
+		
+		\item which is known as the Petrov-Galerkin condition
+		
+		\item A construction of subspace $\mathcal{L}_{n}$ is defined by a method
+		
+		\item and based on matrix properties
+		
+	\end{itemize}
+\end{frame}

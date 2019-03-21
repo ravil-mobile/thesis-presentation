@@ -1,0 +1,102 @@
+\subsubsection{Aspects}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifSpeech
+\begin{frame}[t]{Parallelization Aspects: Speech}
+    \small
+    \justifying
+    \begin{itemize}
+    	\item Iterative methods usually make use of simple linear algebra kernels e.g. dot products, matrix-vector products, etc.
+    	
+    	\begin{itemize}
+    		\item Therefore, sparsity of linear systems can be handled well
+    	\end{itemize}
+    	
+    	\item The methods make use of data-based parallelism
+    	
+    	\begin{itemize}
+    		\item vectors and matrices are distributed among multiple processing units
+    		
+    		\item Therefore, the methods scales well in parallel
+    		
+    		\item the main drop of parallel performance mainlycomes from process-communication overheads	
+    	\end{itemize}
+    	
+    \end{itemize}   
+\end{frame}
+
+\begin{frame}[t]{Preconditioners: Speech}
+\small
+\justifying
+
+\begin{itemize}
+	\item In case of a "bad" initial guess $x_{0}$, convergence of iterative methods strongly depends on an involved matrix and, in particular, on its condition number
+	
+	\item A big condition number usually leads to slow convergence
+	
+	\item a linear transformation, known as preconditioning, can be applied to the original system of equations
+	
+	\item to reduce its condition number and, therefore, to accelerate convergence
+\end{itemize}
+
+\begin{itemize}
+	\item a good preconditioning algorithm should result in
+	
+	\begin{itemize}
+		\item low computational cost
+		\item low storage space 
+		\item low condition number of the transformed system
+		\item adapted for parallel executions as well
+	\end{itemize}
+\end{itemize}
+\end{frame}
+\fi
+
+
+\begin{frame}[t]{Aspects}
+\small
+\begin{block}{Parallelization Aspects}
+	
+	\begin{itemize}
+		\item Iterative methods usually make use of simple linear algebra kernels e.g. dot products, matrix-vector products, etc.
+		
+		\item Therefore, the methods efficiently make use of data-based parallelism 
+	\end{itemize}
+\end{block}
+
+\begin{block}{Numerical Accuracy}
+	
+	\begin{itemize}
+		\item Convergence to the exact solution depends on a value of the  condition number of a matrix
+		
+		\item Usually requires a linear transformation known as preconditioning
+		
+		\begin{itemize}
+			\item to reduce condition number and accelerate convergence
+		\end{itemize}
+	\end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}[t]{Preconditioners}
+\tiny
+\begin{table}[!t]
+	\tiny
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		\begin{tabular}[c]{@{}c@{}}Package\\ name\end{tabular}     & Origin                                                   & Method                                                        & \begin{tabular}[c]{@{}c@{}}Tuning\\ parameters\end{tabular}                                                                                                                            & Comments                                                                  \\ \hline
+		block Jacobi                                               & PETSc                                                    & block Jacobi                                                  & \begin{tabular}[c]{@{}c@{}}-pc\_bjacobi\_blocks\\ -sub\_pc\_type\end{tabular}                                                                                                          & -                                                                         \\ \hline
+		\begin{tabular}[c]{@{}c@{}}additive\\ Schwarz\end{tabular} & PETSc                                                    & \begin{tabular}[c]{@{}c@{}}additive\\ Schwarz\end{tabular}    & \begin{tabular}[c]{@{}c@{}}-pc\_asm\_blocks\\ -pc\_asm\_overlap\\ -pc\_asm\_type\\ -pc\_asm\_local\_type\\ -sub\_pc\_type\end{tabular}                                                 & -                                                                         \\ \hline
+		euclid                                                     & hypre                                                    & ILU(k)                                                        & \begin{tabular}[c]{@{}c@{}}-nlevel\\ -thresh\\ -filter\end{tabular}                                                                                                                    & \begin{tabular}[c]{@{}c@{}}deprecated\\ form\\ PETSc\end{tabular}         \\ \hline
+		pilut                                                      & hypre                                                    & ILU(t)                                                        & \begin{tabular}[c]{@{}c@{}}-pc\_hypre\_pilut\_tol\\ -pc\_hypre\_pilut\_maxiter\\ -pc\_hypre\_pilut\_factorrowsize\end{tabular}                                                         & -                                                                         \\ \hline
+		parasail                                                   & hypre                                                    & SPAI                                                          & \begin{tabular}[c]{@{}c@{}}-pc\_hypre\_parasails\_nlevels\\ -pc\_hypre\_parasails\_thresh\\ -pc\_hypre\_parasails\_filter\end{tabular}                                                 & -                                                                         \\ \hline
+		SPAI                                                       & \begin{tabular}[c]{@{}c@{}}Grote,\\ Barnard\end{tabular} & SPAI                                                          & \begin{tabular}[c]{@{}c@{}}-pc\_spai\_epsilon\\ -pc\_spai\_nbstep\\ -pc\_spai\_max\\ -pc\_spai\_max\_new\\ -pc\_spai\_block\_size\\ -pc\_spai\_cache\_size\end{tabular}                & -                                                                         \\ \hline
+		BoomerAMG                                                  & hypre                                                    & \begin{tabular}[c]{@{}c@{}}algebraic\\ multigrid\end{tabular} & \begin{tabular}[c]{@{}c@{}}-pc\_hypre\_boomeramg\_cycle\_type\\ -pc\_hypre\_boomeramg\_max\_levels\\ -pc\_hypre\_boomeramg\_max\_iter\\ -pc\_hypre\_boomeramg\_tol\\ etc.\end{tabular} & \begin{tabular}[c]{@{}c@{}}39 tuning\\ parameters\\ in total\end{tabular} \\ \hline
+	\end{tabular}
+	\caption{Parallel preconditioning algorithms available in PETSC}
+	\label{table:preconditioners}
+\end{table}
+
+\end{frame}
